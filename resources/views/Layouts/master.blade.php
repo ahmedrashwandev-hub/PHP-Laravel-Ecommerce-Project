@@ -10,26 +10,26 @@
 	<title>Fruitkha - Slider Version</title>
 
 	<!-- favicon -->
-	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+	<link rel="shortcut icon" type="image/png" href={{asset("assets/img/favicon.png")}}>
 	<!-- google font -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
 	<!-- fontawesome -->
-	<link rel="stylesheet" href="assets/css/all.min.css">
+	<link rel="stylesheet" href={{asset("assets/css/all.min.css")}}>
 	<!-- bootstrap -->
-	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href={{asset("assets/bootstrap/css/bootstrap.min.css")}}>
 	<!-- owl carousel -->
-	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<link rel="stylesheet" href={{asset("assets/css/owl.carousel.css")}}>
 	<!-- magnific popup -->
-	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+	<link rel="stylesheet" href={{asset("assets/css/magnific-popup.css")}}>
 	<!-- animate css -->
-	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href={{asset("assets/css/animate.css")}}>
 	<!-- mean menu css -->
-	<link rel="stylesheet" href="assets/css/meanmenu.min.css">
+	<link rel="stylesheet" href={{asset("assets/css/meanmenu.min.css")}}>
 	<!-- main style -->
-	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href={{asset("assets/css/main.css")}}>
 	<!-- responsive -->
-	<link rel="stylesheet" href="assets/css/responsive.css">
+	<link rel="stylesheet" href={{asset("assets/css/responsive.css")}}>
 </head>
 <body>
 	
@@ -47,24 +47,20 @@
 					<div class="main-menu-wrap">
 						<!-- logo -->
 						<div class="site-logo">
-							<a href="index.html">
-								<img src="assets/img/logo.png" alt="">
+							<a href="\">
+								<img src={{asset("assets/img/logo.png")}} alt="">
 							</a>
 						</div>
 						<!-- logo -->
 
 						<!-- menu start -->
-						<nav class="main-menu">
+						<nav class="main-menu" dir="rtl">
 							<ul>
-								<li class="current-list-item"><a href="#">Home</a>
-									<ul class="sub-menu">
-										<li><a href="index.html">Static Home</a></li>
-										<li><a href="index_2.html">Slider Home</a></li>
-									</ul>
-								</li>
-								<li><a href="/products">Product</a></li>
-								<li><a href="/category">category</a></li>
-								<li><a href="#">Pages</a>
+								<li class="current-list-item"><a href="\">الرئيسية</a></li>
+								<li><a href="/products">المنتجات</a></li>
+								<li><a href="/category">الأقسام</a></li>
+								<li><a href="/">من نحن</a>
+								<li><a href="#">الصفحات</a>
 									<ul class="sub-menu">
 										<li><a href="404.html">404 page</a></li>
 										<li><a href="/products">Product</a></li>
@@ -75,7 +71,7 @@
 										<li><a href="shop.html">Shop</a></li>
 									</ul>
 								</li>
-								<li><a href="news.html">News</a>
+								{{-- <li><a href="news.html">News</a>
 									<ul class="sub-menu">
 										<li><a href="news.html">News</a></li>
 										<li><a href="single-news.html">Single News</a></li>
@@ -89,7 +85,7 @@
 										<li><a href="single-product.html">Single Product</a></li>
 										<li><a href="cart.html">Cart</a></li>
 									</ul>
-								</li>
+								</li> --}}
 								<li>
 									<div class="header-icons">
 										<a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
@@ -136,11 +132,11 @@
 					<div class="col-md-12 col-lg-7 offset-lg-1 offset-xl-0">
 						<div class="hero-text">
 							<div class="hero-text-tablecell">
-								<p class="subtitle">Fresh & Organic</p>
-								<h1>Delicious Seasonal Fruits</h1>
+								<p class="subtitle">متعة التسوق عبر فروعنا</p>
+								<h1>أحدث صيحات الموضه والتسوق</h1>
 								<div class="hero-btns">
-									<a href="shop.html" class="boxed-btn">Fruit Collection</a>
-									<a href="contact.html" class="bordered-btn">Contact Us</a>
+									<a href="shop.html" class="boxed-btn">سجل معنا</a>
+									<a href="contact.html" class="bordered-btn">تواص معنا</a>
 								</div>
 							</div>
 						</div>
@@ -155,11 +151,11 @@
 					<div class="col-lg-10 offset-lg-1 text-center">
 						<div class="hero-text">
 							<div class="hero-text-tablecell">
-								<p class="subtitle">Fresh Everyday</p>
-								<h1>100% Organic Collection</h1>
+								<p class="subtitle">توصيل بأقل الأسعار حتى باب المنزل</p>
+								<h1>مأكولات طبيعية ٪١٠٠</h1>
 								<div class="hero-btns">
-									<a href="shop.html" class="boxed-btn">Visit Shop</a>
-									<a href="contact.html" class="bordered-btn">Contact Us</a>
+									<a href="shop.html" class="boxed-btn">سجل معنا</a>
+									<a href="contact.html" class="bordered-btn">تواصل معنا</a>
 								</div>
 							</div>
 						</div>
@@ -174,11 +170,11 @@
 					<div class="col-lg-10 offset-lg-1 text-right">
 						<div class="hero-text">
 							<div class="hero-text-tablecell">
-								<p class="subtitle">Mega Sale Going On!</p>
-								<h1>Get December Discount</h1>
+								<p class="subtitle">عروض يومية على جميع المنتجات</p>
+								<h1>خصومات لا نهائية على جميع المنتجات</h1>
 								<div class="hero-btns">
-									<a href="shop.html" class="boxed-btn">Visit Shop</a>
-									<a href="contact.html" class="bordered-btn">Contact Us</a>
+									<a href="shop.html" class="boxed-btn">سجل معنا</a>
+									<a href="contact.html" class="bordered-btn">تواصل معنا</a>
 								</div>
 							</div>
 						</div>
@@ -193,28 +189,7 @@
 
 
 
-
-
-
     @yield('content')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -244,8 +219,8 @@
 					<div class="footer-box pages">
 						<h2 class="widget-title">Pages</h2>
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">About</a></li>
+							<li><a href="/">Home</a></li>
+							<li><a href="/product">About</a></li>
 							<li><a href="services.html">Shop</a></li>
 							<li><a href="news.html">News</a></li>
 							<li><a href="contact.html">Contact</a></li>
@@ -272,8 +247,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-md-12">
-					<p>Copyrights &copy; 2019 - <a href="https://imransdesign.com/">Imran Hossain</a>,  All Rights Reserved.<br>
-						Distributed By - <a href="https://themewagon.com/">Themewagon</a>
+					<p>حقوق الملكية محفوظة لدى الموقع &copy; 2023 - <a href="https://courageous-speculoos-39240f.netlify.app/">م / أحمد رشوان</a>, كل الحقوق محفوظة<br>
+						صمم بواسطة - <a href="https://courageous-speculoos-39240f.netlify.app/">م / أحمد رشوان</a>
 					</p>
 				</div>
 				<div class="col-lg-6 text-right col-md-12">
@@ -293,25 +268,25 @@
 	<!-- end copyright -->
 	
 	<!-- jquery -->
-	<script src="assets/js/jquery-1.11.3.min.js"></script>
+	<script src={{asset("assets/js/jquery-1.11.3.min.js")}}></script>
 	<!-- bootstrap -->
-	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src={{asset("assets/bootstrap/js/bootstrap.min.js")}}></script>
 	<!-- count down -->
-	<script src="assets/js/jquery.countdown.js"></script>
+	<script src={{asset("assets/js/jquery.countdown.js")}}></script>
 	<!-- isotope -->
-	<script src="assets/js/jquery.isotope-3.0.6.min.js"></script>
+	<script src={{asset("assets/js/jquery.isotope-3.0.6.min.js")}}></script>
 	<!-- waypoints -->
-	<script src="assets/js/waypoints.js"></script>
+	<script src={{asset("assets/js/waypoints.js")}}></script>
 	<!-- owl carousel -->
-	<script src="assets/js/owl.carousel.min.js"></script>
+	<script src={{asset("assets/js/owl.carousel.min.js")}}></script>
 	<!-- magnific popup -->
-	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<script src={{asset("assets/js/jquery.magnific-popup.min.js")}}></script>
 	<!-- mean menu -->
-	<script src="assets/js/jquery.meanmenu.min.js"></script>
+	<script src={{asset("assets/js/jquery.meanmenu.min.js")}}></script>
 	<!-- sticker js -->
-	<script src="assets/js/sticker.js"></script>
+	<script src={{asset("assets/js/sticker.js")}}></script>
 	<!-- main js -->
-	<script src="assets/js/main.js"></script>
+	<script src={{asset("assets/js/main.js")}}></script>
 
 </body>
 </html>

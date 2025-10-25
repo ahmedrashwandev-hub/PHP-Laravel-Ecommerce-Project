@@ -17,9 +17,8 @@
 					<div class="col-lg-4 col-md-6 text-center">
 						<div class="single-product-item">
 							<div class="product-image">
-								<a href="single-product.html">
-									<img src="{{ url($item -> imagepath) }}" alt="" style="min-width: 250px !important; max-height: 250px !important;">
-									
+								<a href="/product/{{ $item -> id }}">
+									<img src="{{ url($item -> imagepath) }}" alt="" style="min-width: 250px !important; max-height: 250px	 !important;">
 								</a>
 							</div>
 							<h3>{{ $item -> name }}</h3>

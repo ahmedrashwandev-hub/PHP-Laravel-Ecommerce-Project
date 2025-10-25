@@ -7,9 +7,26 @@ Route::get('/', function () {
     return view('welcome',[ 'categories' => $result ]);
 });
 
-Route::get('/products', function () {
-    return view('product');
+Route::get('/product/{catid?}', function ( $catid = null ) {
+    if (!$catid) {
+        $result = DB::table('products')->get();
+        return view('product',[ 'products' => $result ]);
+    }
+    else {
+        $result = DB::table('products')->where('category_id',$catid)->get();
+        return view('product',[ 'products' => $result ]);
+    }
 });
+
+
+
 Route::get('/category', function () {
     return view('category');
+});
+
+
+
+
+Route::get('/test', function () {
+    return view('test');
 });
