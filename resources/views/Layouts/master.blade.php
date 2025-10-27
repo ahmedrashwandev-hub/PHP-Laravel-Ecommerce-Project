@@ -132,7 +132,7 @@
 					<div class="col-md-12 col-lg-7 offset-lg-1 offset-xl-0">
 						<div class="hero-text">
 							<div class="hero-text-tablecell">
-								<p class="subtitle">متعة التسوق عبر فروعنا</p>
+								<p class="subtitle" style="letter-spacing: 0 !important;">متعة التسوق عبر فروعنا</p>
 								<h1>أحدث صيحات الموضه والتسوق</h1>
 								<div class="hero-btns">
 									<a href="shop.html" class="boxed-btn">سجل معنا</a>
@@ -151,7 +151,7 @@
 					<div class="col-lg-10 offset-lg-1 text-center">
 						<div class="hero-text">
 							<div class="hero-text-tablecell">
-								<p class="subtitle">توصيل بأقل الأسعار حتى باب المنزل</p>
+								<p class="subtitle" style="letter-spacing: 0 !important;">توصيل بأقل الأسعار حتى باب المنزل</p>
 								<h1>مأكولات طبيعية ٪١٠٠</h1>
 								<div class="hero-btns">
 									<a href="shop.html" class="boxed-btn">سجل معنا</a>
@@ -170,7 +170,7 @@
 					<div class="col-lg-10 offset-lg-1 text-right">
 						<div class="hero-text">
 							<div class="hero-text-tablecell">
-								<p class="subtitle">عروض يومية على جميع المنتجات</p>
+								<p class="subtitle" style="letter-spacing: 0 !important;">عروض يومية على جميع المنتجات</p>
 								<h1>خصومات لا نهائية على جميع المنتجات</h1>
 								<div class="hero-btns">
 									<a href="shop.html" class="boxed-btn">سجل معنا</a>
