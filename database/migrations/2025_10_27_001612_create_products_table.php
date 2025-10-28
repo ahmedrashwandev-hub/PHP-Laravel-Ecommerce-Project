@@ -19,6 +19,11 @@ return new class extends Migration
             $table->integer('quantity');
             $table->decimal('price', 8, 2);
 
+            // $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
+
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

@@ -1,19 +1,21 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Category;
+use App\Models\Product;
 
 Route::get('/', function () {
-    $result = DB::table('categories')->get();
+    $result = Category::all();
     return view('welcome',[ 'categories' => $result ]);
 });
 
 Route::get('/product/{catid?}', function ( $catid = null ) {
-    if (!$catid) {
-        $result = DB::table('products')->get();
+    if ($catid) {
+        $result = Product::where('category_id',$catid)->get();
         return view('product',[ 'products' => $result ]);
     }
     else {
-        $result = DB::table('products')->where('category_id',$catid)->get();
+        $result = Product::all();
         return view('product',[ 'products' => $result ]);
     }
 });
