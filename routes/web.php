@@ -1,34 +1,19 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\Category;
-use App\Models\Product;
+use App\Http\Controllers\FirstController;
+use App\Http\Controllers\ProductController;
 
-Route::get('/', function () {
-    $result = Category::all();
-    return view('welcome',[ 'categories' => $result ]);
-});
+Route::get('/', [FirstController::class , 'MainPage'] );
 
-Route::get('/product/{catid?}', function ( $catid = null ) {
-    if ($catid) {
-        $result = Product::where('category_id',$catid)->get();
-        return view('product',[ 'products' => $result ]);
-    }
-    else {
-        $result = Product::all();
-        return view('product',[ 'products' => $result ]);
-    }
-});
+Route::get('/product/{catid?}', [FirstController::class , 'GetCategoryProduct'] );
 
+Route::get('/category', [FirstController::class , 'GetCategoryWithProducts'] );
 
+Route::get('/addproduct', [ProductController::class , 'AddProduct'] );
 
-Route::get('/category', function () {
-    return view('category');
-});
+Route::post('/storeproduct', [ProductController::class , 'StoreProduct'] );
 
 
 
 
-Route::get('/test', function () {
-    return view('test');
-});

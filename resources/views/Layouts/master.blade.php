@@ -32,7 +32,7 @@
 	<link rel="stylesheet" href={{asset("assets/css/responsive.css")}}>
 </head>
 <body>
-	
+
 	<!--PreLoader-->
     <div class="loader">
         <div class="loader-inner">
@@ -103,7 +103,7 @@
 		</div>
 	</div>
 	<!-- end header -->
-	
+
 	<!-- search area -->
 	<div class="search-area">
 		<div class="container">
@@ -241,7 +241,7 @@
 		</div>
 	</div>
 	<!-- end footer -->
-	
+
 	<!-- copyright -->
 	<div class="copyright">
 		<div class="container">
@@ -266,7 +266,7 @@
 		</div>
 	</div>
 	<!-- end copyright -->
-	
+
 	<!-- jquery -->
 	<script src={{asset("assets/js/jquery-1.11.3.min.js")}}></script>
 	<!-- bootstrap -->
