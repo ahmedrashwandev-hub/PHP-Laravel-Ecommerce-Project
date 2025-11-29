@@ -33,6 +33,7 @@ class FirstController extends Controller
         else {
             $result = Product::all();
             return view('product',[ 'products' => $result ]);
+            // abort(403,"you should provide category id");
         }
     }
 /*

@@ -5,15 +5,10 @@ use App\Http\Controllers\FirstController;
 use App\Http\Controllers\ProductController;
 
 Route::get('/', [FirstController::class , 'MainPage'] );
-
 Route::get('/product/{catid?}', [FirstController::class , 'GetCategoryProduct'] );
-
 Route::get('/category', [FirstController::class , 'GetCategoryWithProducts'] );
 
 Route::get('/addproduct', [ProductController::class , 'AddProduct'] );
-
 Route::post('/storeproduct', [ProductController::class , 'StoreProduct'] );
-
-
-
-
+Route::get('/editproduct/{productid?}', [ProductController::class , 'EditProduct'] );
+Route::get('/removeproduct/{productid?}', [ProductController::class , 'RemoveProduct'] );

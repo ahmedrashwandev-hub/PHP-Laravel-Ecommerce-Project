@@ -19,7 +19,7 @@
                         <form method="POST" action="/storeproduct" id="fruitkha-contact" style="direction: rtl;">
                             @csrf
                             <p>
-                                <input type="text" style="width: 100%" required placeholder="الاسم" name="name" id="name" value="{{ old('name') }}">
+                                <input type="text" style="width: 100%" required placeholder="الاسم" name="name" id="name" value="{{ $product->name }}">
                                 <span class="text-danger">
                                     @error('name')
                                         {{ $message }}
@@ -27,13 +27,13 @@
                                 </span>
                             </p>
                             <p style="display: flex">
-                                <input type="number" style="width: 50%" required class="ml-4" placeholder="الكمية" name="quantity" id="quantity" value="{{ old('quantity') }}">
+                                <input type="number" style="width: 50%" required class="ml-4" placeholder="الكمية" name="quantity" id="quantity" value="{{ $product->quantity }}">
                                 <span class="text-danger">
                                     @error('quantity')
                                         {{ $message }}
                                     @enderror
                                 </span>
-                                <input type="number" style="width: 50%" required placeholder="السعر" name="price" id="Price" value="{{ old('price') }}">
+                                <input type="number" style="width: 50%" required placeholder="السعر" name="price" id="Price" value="{{ $product->price }}">
                                 <span class="text-danger">
                                     @error('price')
                                         {{ $message }}
@@ -41,7 +41,7 @@
                                 </span>
                             </p>
                             <p>
-                                <textarea name="description" id="description" required cols="30" rows="10" placeholder="الوصف" >{{ old('description') }}</textarea>
+                                <textarea name="description" id="description" required cols="30" rows="10" placeholder="الوصف" >{{ $product->description }}</textarea>
                                 <span class="text-danger">
                                     @error('description')
                                         {{ $message }}
@@ -51,7 +51,11 @@
                             <p>
                                 <select class="form-control" required name="category_id" id="category_id">
                                     @foreach ($allcategories as $category)
-                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                        @if ($category->id == $product->category_id)
+                                            <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
+                                        @else
+                                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                        @endif
                                     @endforeach
                                 </select>
                                 <span class="text-danger">

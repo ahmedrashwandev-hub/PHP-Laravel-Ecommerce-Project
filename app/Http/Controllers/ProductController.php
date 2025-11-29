@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Category;
+use App\Models\Product;
 
 class ProductController extends Controller
 {
@@ -13,16 +15,68 @@ class ProductController extends Controller
 */
     public function Addproduct()
     {
-        return view('Products.addproduct',[]);
+        $allcategories = Category::all();
+        return view('Products.addproduct',['allcategories'=>$allcategories]);
     }
 /*
 |--------------------------------------------------------------------------------------------
 |                         store product
 |--------------------------------------------------------------------------------------------
 */
-    public function StoreProduct()
+    public function StoreProduct(Request $request)
     {
-        return view('Products.addproduct',[]);
+        $request->validate([
+            'name'=>'required|min:3|max:300',
+            'price'=>'required|numeric',
+            'quantity'=>'required|integer',
+            'description'=>'required|min:3',
+        ]);
+
+        $newProduct = new Product();
+        $newProduct->name = request('name');
+        $newProduct->price = request('price');
+        $newProduct->quantity = request('quantity');
+        $newProduct->description = request('description');
+        $newProduct->imagepath = "sss";
+        $newProduct->category_id = request('category_id');
+
+        $newProduct->save();
+
+        return redirect('/');
+    }
+/*
+|--------------------------------------------------------------------------------------------
+|                         Edit product by id
+|--------------------------------------------------------------------------------------------
+*/
+    public function EditProduct($productid = null)
+    {
+        if ($productid != null) {
+            $product = Product::find($productid);
+            if ($product == null) {
+                abort(403,"Can't find product");
+            }
+            $allcategories = Category::all();
+            return view('Products.editproduct',['product'=>$product,'allcategories'=>$allcategories]);
+        } else {
+            return redirect('addproduct');
+        }
+    }
+/*
+|--------------------------------------------------------------------------------------------
+|                         delete product by id
+|--------------------------------------------------------------------------------------------
+*/
+    public function RemoveProduct($productid = null)
+    {
+        if ($productid != null) {
+            $product = Product::find($productid);
+            $product->delete();
+
+            return redirect('/product')->with('success', 'Product removed successfully.');
+        } else {
+            abort(403,"please enter product id in the route");
+        }
     }
 }
 

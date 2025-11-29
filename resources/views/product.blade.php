@@ -4,7 +4,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
-					<div class="section-title">	
+					<div class="section-title">
 						<h3><span class="orange-text">Our</span> Products</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, fuga quas itaque eveniet beatae optio.</p>
 					</div>
@@ -22,8 +22,10 @@
 							</div>
 							<h3>{{ $item->name }}</h3>
 							<p class="product-price"><span>{{ $item->quantity }}</span> {{ $item->price }} $ </p>
-							<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
-						</div>
+							<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i>أضف إلى السلة</a>
+                            <a href="/removeproduct/{{ $item->id }}" class="btn btn-danger"><i class="fas fa-shopping-cart"></i>حذف المنتج</a>
+                            <a href="/editproduct/{{ $item->id }}" class="btn btn-primary"><i class="fas fa-shopping-cart"></i>تعديل المنتج</a>
+                        </div>
 					</div>
 				@endforeach
 			</div>

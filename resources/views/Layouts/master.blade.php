@@ -57,8 +57,9 @@
 						<nav class="main-menu" dir="rtl">
 							<ul>
 								<li class="current-list-item"><a href="\">الرئيسية</a></li>
-								<li><a href="/products">المنتجات</a></li>
+								<li><a href="/product">المنتجات</a></li>
 								<li><a href="/category">الأقسام</a></li>
+								<li><a href="/addproduct">إضافة منتج</a></li>
 								<li><a href="/">من نحن</a>
 								<li><a href="#">الصفحات</a>
 									<ul class="sub-menu">
