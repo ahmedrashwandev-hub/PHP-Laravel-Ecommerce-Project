@@ -60,7 +60,7 @@
 								<li><a href="/product">المنتجات</a></li>
 								<li><a href="/category">الأقسام</a></li>
 								<li><a href="/addproduct">إضافة منتج</a></li>
-								<li><a href="/reviews">إضافة رآى </a></li>
+								<li><a href="/reviews"> آراء العملاء </a></li>
 								<li><a href="/">من نحن</a>
 								<li><a href="news.html">News</a>
 									<ul class="sub-menu">
@@ -94,10 +94,13 @@
 					<span class="close-btn"><i class="fas fa-window-close"></i></span>
 					<div class="search-bar">
 						<div class="search-bar-tablecell">
-							<h3>Search For:</h3>
-							<input type="text" placeholder="Keywords">
-							<button type="submit">Search <i class="fas fa-search"></i></button>
-						</div>
+							<h3>البحث فى جميع المنتجات الخاصة بنا</h3>
+                            <form action="/search" method="post">
+                                @csrf
+							    <input type="text" name="searchkey" placeholder="ابحث عن المنتجات">
+							    <button type="submit">بحث <i class="fas fa-search"></i></button>
+                            </form>
+                        </div>
 					</div>
 				</div>
 			</div>

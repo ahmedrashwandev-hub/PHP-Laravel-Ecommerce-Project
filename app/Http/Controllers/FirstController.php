@@ -84,4 +84,14 @@ class FirstController extends Controller
 
         return redirect('/reviews');
     }
+/*
+|--------------------------------------------------------------------------------------------
+|                         Search in all Products
+|--------------------------------------------------------------------------------------------
+*/
+    public function search(Request $request)
+    {
+        $products = Product::where('name','like', '%'.$request->searchkey.'%')->get();
+        return view('product',[ 'products' => $products ]);
+    }
 }

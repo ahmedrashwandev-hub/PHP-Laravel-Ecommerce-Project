@@ -15,3 +15,5 @@ Route::get('/addproduct', [ProductController::class , 'AddProduct'] );
 Route::post('/storeproduct', [ProductController::class , 'StoreProduct'] );
 Route::get('/editproduct/{productid?}', [ProductController::class , 'EditProduct'] );
 Route::get('/removeproduct/{productid?}', [ProductController::class , 'RemoveProduct'] );
+Route::post('/search', [FirstController::class , 'search'] );
+
