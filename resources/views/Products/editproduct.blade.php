@@ -19,6 +19,7 @@
                         <form method="POST" action="/storeproduct" id="fruitkha-contact" style="direction: rtl;">
                             @csrf
                             <p>
+                                <input type="hidden" style="width: 100%" placeholder="" name="id" id="id" value="{{ $product->id }}">
                                 <input type="text" style="width: 100%" required placeholder="الاسم" name="name" id="name" value="{{ $product->name }}">
                                 <span class="text-danger">
                                     @error('name')

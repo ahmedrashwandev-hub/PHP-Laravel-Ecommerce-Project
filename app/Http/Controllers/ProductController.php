@@ -31,18 +31,33 @@ class ProductController extends Controller
             'quantity'=>'required|integer',
             'description'=>'required|min:3',
         ]);
+        // edit
+        if ($request->id)
+        {
+            $currentProduct= Product::find($request->id);
+            $currentProduct->name = request('name');
+            $currentProduct->price = request('price');
+            $currentProduct->quantity = request('quantity');
+            $currentProduct->description = request('description');
+            $currentProduct->imagepath = "sss";
+            $currentProduct->category_id = request('category_id');
+            $currentProduct->save();
+            return redirect('/product');
+        }
+        // store
+        else {
+            $newProduct = new Product();
+            $newProduct->name = request('name');
+            $newProduct->price = request('price');
+            $newProduct->quantity = request('quantity');
+            $newProduct->description = request('description');
+            $newProduct->imagepath = "sss";
+            $newProduct->category_id = request('category_id');
 
-        $newProduct = new Product();
-        $newProduct->name = request('name');
-        $newProduct->price = request('price');
-        $newProduct->quantity = request('quantity');
-        $newProduct->description = request('description');
-        $newProduct->imagepath = "sss";
-        $newProduct->category_id = request('category_id');
+            $newProduct->save();
 
-        $newProduct->save();
-
-        return redirect('/');
+            return redirect('/');
+        }
     }
 /*
 |--------------------------------------------------------------------------------------------

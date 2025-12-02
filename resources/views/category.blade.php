@@ -27,6 +27,8 @@
                         <p class="product-price"> {{ $product->price }} </p>
                         <p class="product-price"><span>quantity</span> {{ $product->quantity }} </p>
                         <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                        <a href="/removeproduct/{{ $item->id }}" class="btn btn-danger"><i class="fas fa-shopping-cart"></i>حذف المنتج</a>
+                        <a href="/editproduct/{{ $item->id }}" class="btn btn-primary"><i class="fas fa-shopping-cart"></i>تعديل المنتج</a>
 					</div>
                 </div>
                 @endforeach

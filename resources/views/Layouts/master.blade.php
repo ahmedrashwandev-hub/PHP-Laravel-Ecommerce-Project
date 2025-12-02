@@ -7,7 +7,7 @@
 	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
 
 	<!-- title -->
-	<title>Fruitkha - Slider Version</title>
+	<title>Fruitkha</title>
 
 	<!-- favicon -->
 	<link rel="shortcut icon" type="image/png" href={{asset("assets/img/favicon.png")}}>
@@ -60,33 +60,14 @@
 								<li><a href="/product">المنتجات</a></li>
 								<li><a href="/category">الأقسام</a></li>
 								<li><a href="/addproduct">إضافة منتج</a></li>
+								<li><a href="/reviews">إضافة رآى </a></li>
 								<li><a href="/">من نحن</a>
-								<li><a href="#">الصفحات</a>
-									<ul class="sub-menu">
-										<li><a href="404.html">404 page</a></li>
-										<li><a href="/products">Product</a></li>
-										<li><a href="/category">category</a></li>
-										<li><a href="checkout.html">Check Out</a></li>
-										<li><a href="contact.html">Contact</a></li>
-										<li><a href="news.html">News</a></li>
-										<li><a href="shop.html">Shop</a></li>
-									</ul>
-								</li>
-								{{-- <li><a href="news.html">News</a>
+								<li><a href="news.html">News</a>
 									<ul class="sub-menu">
 										<li><a href="news.html">News</a></li>
 										<li><a href="single-news.html">Single News</a></li>
 									</ul>
 								</li>
-								<li><a href="contact.html">Contact</a></li>
-								<li><a href="shop.html">Shop</a>
-									<ul class="sub-menu">
-										<li><a href="shop.html">Shop</a></li>
-										<li><a href="checkout.html">Check Out</a></li>
-										<li><a href="single-product.html">Single Product</a></li>
-										<li><a href="cart.html">Cart</a></li>
-									</ul>
-								</li> --}}
 								<li>
 									<div class="header-icons">
 										<a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>

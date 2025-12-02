@@ -22,9 +22,11 @@
 							</div>
 							<h3>{{ $item->name }}</h3>
 							<p class="product-price"><span>{{ $item->quantity }}</span> {{ $item->price }} $ </p>
-							<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i>أضف إلى السلة</a>
-                            <a href="/removeproduct/{{ $item->id }}" class="btn btn-danger"><i class="fas fa-shopping-cart"></i>حذف المنتج</a>
-                            <a href="/editproduct/{{ $item->id }}" class="btn btn-primary"><i class="fas fa-shopping-cart"></i>تعديل المنتج</a>
+							<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i>أضف إلى السلة </a>
+                            <p class="mt-3">
+                                <a href="/removeproduct/{{ $item->id }}" class="btn btn-danger"><i class="fas fa-shopping-cart"></i> حذف المنتج</a>
+                                <a href="/editproduct/{{ $item->id }}" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> تعديل المنتج</a>
+                            </p>
                         </div>
 					</div>
 				@endforeach
